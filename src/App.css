@@ -1,5 +1,8 @@
+/* src/App.css */
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
+  background-color: #f0f8ff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,33 +10,89 @@ body {
   margin: 0;
 }
 
-div {
+.container {
   text-align: center;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  cursor: pointer;
-  margin: 10px 0;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
 }
 
 button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  padding: 15px 20px;
+  margin: 20px 0;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.question {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.options button {
+  background-color: #008cba;
+  margin: 10px 0;
+  transition: transform 0.3s ease;
+}
+
+.options button:hover {
+  transform: scale(1.05);
+}
+
+.options button.selected {
+  background-color: #ff9800;
+  transform: scale(1.1);
+}
+
+.timer {
+  font-size: 18px;
+  color: #ff4500;
+  margin: 20px 0;
+}
+
+.result {
+  font-size: 24px;
+  margin: 20px 0;
 }
 
 @media (max-width: 600px) {
-  body {
+  .container {
+    padding: 15px;
+    width: 90%;
+  }
+
+  .question {
+    font-size: 18px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 12px 16px;
+  }
+
+  .timer {
     font-size: 16px;
   }
 
-  div {
-    width: 90%;
+  .result {
+    font-size: 20px;
   }
 }
